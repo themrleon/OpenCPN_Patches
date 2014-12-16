@@ -1,0 +1,54 @@
+--- src/chart1.cpp	2014-12-02 17:25:38.691245511 -0600
++++ src/chart1.cpp	2014-11-13 17:41:14.474700221 -0600
+@@ -2481,7 +2484,7 @@
+         tb->AddTool( ID_ZOOMOUT, _T("zoomout"),
+             style->GetToolIcon( _T("zoomout"), TOOLICON_NORMAL ), tipString, wxITEM_NORMAL );
+ 
+-    m_toolbar_scale_tools_shown = pCurrentStack && pCurrentStack->b_valid
++    /*m_toolbar_scale_tools_shown = pCurrentStack && pCurrentStack->b_valid
+             && ( pCurrentStack->nEntry > 1 );
+ 
+     CheckAndAddPlugInTool( tb );
+@@ -2498,7 +2501,7 @@
+         newtool = tb->AddTool( ID_STKUP, _T("scout"),
+                 style->GetToolIcon( _T("scout"), TOOLICON_NORMAL ), tipString, wxITEM_NORMAL );
+         newtool->Enable( m_toolbar_scale_tools_shown );
+-    }
++    }*/
+ 
+     CheckAndAddPlugInTool( tb );
+     tipString = wxString( _("Create Route") ) << _T(" (Ctrl-R)");
+@@ -2519,7 +2522,7 @@
+     if( _toolbarConfigMenuUtil( ID_SETTINGS, tipString ) )
+         tb->AddTool( ID_SETTINGS, _T("settings"),
+             style->GetToolIcon( _T("settings"), TOOLICON_NORMAL ), tipString, wxITEM_NORMAL );
+-
++/*
+     CheckAndAddPlugInTool( tb );
+     tipString = wxString( _("Show ENC Text") ) << _T(" (T)");
+     if( _toolbarConfigMenuUtil( ID_TEXT, tipString ) )
+@@ -2552,14 +2555,14 @@
+     if( _toolbarConfigMenuUtil( ID_PRINT, tipString ) )
+         tb->AddTool( ID_PRINT, _T("print"),
+             style->GetToolIcon( _T("print"), TOOLICON_NORMAL ), tipString, wxITEM_NORMAL );
+-
++*/
+     CheckAndAddPlugInTool( tb );
+     tipString = _("Route Manager");
+     if( _toolbarConfigMenuUtil( ID_ROUTEMANAGER, tipString ) )
+         tb->AddTool( ID_ROUTEMANAGER,
+             _T("route_manager"), style->GetToolIcon( _T("route_manager"), TOOLICON_NORMAL ),
+             tipString, wxITEM_NORMAL );
+-
++/*
+     CheckAndAddPlugInTool( tb );
+     tipString = _("Toggle Tracking");
+     if( _toolbarConfigMenuUtil( ID_TRACK, tipString ) )
+@@ -2585,7 +2588,7 @@
+     if( _toolbarConfigMenuUtil( ID_HELP, tipString ) )
+         tb->AddTool( ID_HELP, _T("help"),
+             style->GetToolIcon( _T("help"), TOOLICON_NORMAL ), tipString, wxITEM_NORMAL );
+-
++*/
+     //      Add any PlugIn toolbar tools that request default positioning
+     AddDefaultPositionPlugInTools( tb );

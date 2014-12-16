@@ -1,0 +1,21 @@
+--- src/chcanv.cpp	2014-11-15 18:28:48.382131797 -0600
++++ src/chcanv.cpp	2014-11-15 18:28:48.382131797 -0600
+@@ -11067,7 +11064,7 @@
+ 
+ // Create the 3 DepthUnit emboss map structures
+     m_pEM_Feet = CreateEmbossMapData( font, emboss_width, emboss_height, _("Feet"), cs );
+-    m_pEM_Meters = CreateEmbossMapData( font, emboss_width, emboss_height, _("Meters"), cs );
++    m_pEM_Meters = CreateEmbossMapData( font, emboss_width, emboss_height, _(""), cs );
+     m_pEM_Fathoms = CreateEmbossMapData( font, emboss_width, emboss_height, _("Fathoms"), cs );
+ }
+ 
+@@ -11088,7 +11085,7 @@
+     dc.SetFont( font );
+     dc.GetTextExtent( _("OverZoom"), &w, &h );
+ 
+-    m_pEM_OverZoom = CreateEmbossMapData( font, w + 10, h + 10, _("OverZoom"), cs );
++    m_pEM_OverZoom = CreateEmbossMapData( font, w + 10, h + 10, _(""), cs );
+ }
+ 
+ emboss_data *ChartCanvas::CreateEmbossMapData( wxFont &font, int width, int height,
+

@@ -1,0 +1,44 @@
+--- src/chart1.cpp	2014-12-02 17:01:31.179221424 -0600
++++ src/chart1.cpp	2014-11-13 17:41:14.474700221 -0600
+@@ -1003,9 +1004,9 @@
+         if( wxFileName::GetSize( glog_file ) > 1000000 ) {
+             wxString oldlog = glog_file;                      // pjotrc 2010.02.09
+             oldlog.Append( _T(".log") );
+-            wxString msg1( _T("Old log will be moved to opencpn.log.log") );
++            /*wxString msg1( _T("Old log will be moved to opencpn.log.log") );
+             OCPNMessageBox ( NULL, msg1, wxString( _("OpenCPN Info") ),
+-                    wxICON_INFORMATION | wxOK );
++                    wxICON_INFORMATION | wxOK );*/
+ //            int dlg_ret;
+ //            dlg_ret = mdlg.ShowModal();
+             ::wxRenameFile( glog_file, oldlog );
+@@ -1296,8 +1297,9 @@
+ //  or if the version string has changed at all
+ //  We defer until here to allow for localization of the message
+     if( !n_NavMessageShown || ( vs != g_config_version_string ) ) {
+-        if( wxID_CANCEL == ShowNavWarning() ) return false;
+-        n_NavMessageShown = 1;
++    	n_NavMessageShown = 1;
++        /*if( wxID_CANCEL == ShowNavWarning() ) return false;
++        n_NavMessageShown = 1;*/
+     }
+ 
+     g_config_version_string = vs;
+@@ -1805,7 +1808,7 @@
+ 
+         else            // No chart database, no config hints, so bail to Options....
+         {
+-            wxLogMessage(
++            /*wxLogMessage(
+                     _T("Chartlist file not found, config chart dir array is empty.  Chartlist target file is:")
+                             + *pChartListFileName );
+ 
+@@ -1814,7 +1817,7 @@
+ 
+             OCPNMessageBox(gFrame, msg1, wxString( _("OpenCPN Info") ), wxICON_INFORMATION | wxOK );
+ 
+-            gFrame->DoOptionsDialog();
++            gFrame->DoOptionsDialog();*/
+ 
+             b_SetInitialPoint = true;
+ 

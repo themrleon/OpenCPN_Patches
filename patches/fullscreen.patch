@@ -1,0 +1,9 @@
+--- src/chart1.cpp	2014-11-15 17:24:37.622067642 -0600
+@@ -1609,6 +1609,7 @@
+     }
+ 
+     gFrame = new MyFrame( NULL, myframe_window_title, position, new_frame_size, app_style ); //Gunther
++    gFrame->ToggleFullScreen();
+ 
+     g_pauimgr = new wxAuiManager;
+ //        g_pauidockart= new wxAuiDefaultDockArt;

@@ -1,0 +1,23 @@
+--- src/concanv.cpp     2014-11-15 16:59:09.862042230 -0600
++++ src/concanv.cpp     2014-11-15 16:59:09.862042230 -0600
+@@ -259,7 +259,7 @@
+                 else
+                     srng.Printf( _T("%5.1f/%5.1f"), rng, nrng );
+             } else {
+-                if( rng < 10.0 ) srng.Printf( _T("%6.2f"), rng );
++                if( rng < 10.0 ) srng.Printf( _T("%6.3f"), rng );
+                 else
+                     srng.Printf( _T("%6.1f"), rng );
+             }
+
+--- src/navutil.cpp     2014-11-15 16:59:09.882042233 -0600
++++ src/navutil.cpp     2014-11-15 16:59:09.882042233 -0600
+@@ -1297,7 +1297,7 @@
+     m_pLastAddedPoint = NULL;
+     m_GUID = pWayPointMan->CreateGUID( NULL );
+ 
+-    m_ArrivalRadius = .05;        // default, Miles
++    m_ArrivalRadius = .001;        // default, Miles
+ 
+     RBBox.Reset();
+     m_bcrosses_idl = false
